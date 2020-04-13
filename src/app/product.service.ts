@@ -15,5 +15,9 @@ export class ProductService {
 
   getProduct(id: number): Observable<any> {
     return this.http.get(`${this.baseUrl}/${id}`);
-  } 
+  }
+
+  newProduct(product: Object): Observable<Object> {
+    return this.http.post(`${this.baseUrl}`, product);
+  }
 }

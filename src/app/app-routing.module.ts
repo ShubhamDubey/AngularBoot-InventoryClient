@@ -11,7 +11,8 @@ const routes: Routes = [{ path: '', redirectTo: 'product', pathMatch: 'full' },
 { path: 'products', component: ProductListComponent },
 { path: 'add', component: CreateProductComponent },
 { path: 'details/:id', component: ProductDetailsComponent },
-{ path: 'update/:id', component: UpdateProductComponent },];
+{ path: 'update/:id', component: UpdateProductComponent },
+{ path: 'add', component: CreateProductComponent },];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

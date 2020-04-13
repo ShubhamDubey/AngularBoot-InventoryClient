@@ -20,7 +20,7 @@
                     <td>{{ product.name }}</td>
                     <td>{{ product.brand }}</td>
                     <td>{{ product.madein }}</td>
-                    <td>{{ product.price }}</td>
+                    <td>{{ product.price | currency:'INR' }}</td>
                     <td>
                         <!-- <button (click)="deleteProduct(product.id)" class="btn btn-danger">Delete</button>
                         <button (click)="editProduct(product.id)" class="btn btn-secondary"
