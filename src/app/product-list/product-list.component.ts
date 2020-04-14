@@ -25,7 +25,7 @@ export class ProductListComponent implements OnInit {
   reloadData() {
     this.products = this.productService.getProductList();
   }
-  
+
   productDetails(id: number) {
     this.router.navigate(['details', id]);
   }

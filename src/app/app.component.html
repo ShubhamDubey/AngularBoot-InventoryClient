@@ -2,17 +2,27 @@
   <!-- Links -->
   <ul class="navbar-nav">
     <li class="nav-item">
-      <a routerLink="products" class="nav-link" routerLinkActive="active">Product List</a>
+      <a *ngIf="loginService.isUserLoggedIn()" routerLink="products" class="nav-link" routerLinkActive="active">Product
+        List</a>
     </li>
     <li class="nav-item">
-      <a routerLink="add" class="nav-link" routerLinkActive="active">Add Product</a>
+      <a *ngIf="loginService.isUserLoggedIn()" routerLink="add" class="nav-link" routerLinkActive="active">Add
+        Product</a>
+    </li>
+    <li class="nav-item">
+      <a *ngIf="!loginService.isUserLoggedIn()" routerLink="/login" class="nav-link" routerLinkActive="active">Login</a>
+    </li>
+    <li class="nav-item">
+      <a *ngIf="!loginService.isUserLoggedIn()" routerLink="/register" class="nav-link"
+        routerLinkActive="active">Register</a>
+    </li>
+    <li class="nav-item">
+      <a *ngIf="!loginService.isUserLoggedIn()" routerLink="/logout" class="nav-link"
+        routerLinkActive="active">LogOut</a>
     </li>
   </ul>
 </nav>
-
 <div class="container">
-
-
   <br>
   <h2 style="text-align: center;">{{title}}</h2>
   <hr>
@@ -23,9 +33,8 @@
   </div>
 </div>
 
-
 <footer class="footer">
   <div class="container">
-    <span>All Rights Reserved 2020 @Techno</span>
+    <span style="color: white;">All Rights Reserved 2020 @Techno</span>
   </div>
 </footer>
